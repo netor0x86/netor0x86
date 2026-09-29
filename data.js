@@ -2,7 +2,7 @@
    data.js —— 数据维护文件
    ============================================================ */
 
-const COLLAPSE_THRESHOLD = 5;
+const COLLAPSE_THRESHOLD = 3;
 
 /* ============ 一、GitHub 作品 ============ */
 const projects = [
@@ -81,6 +81,13 @@ const articles = [
     /** 2021 **/
     /** 11 **/
     {title: '大数据 | HDFS 元数据持久化笔记', date: '2021-11-29', url: 'https://mp.weixin.qq.com/s/INxxlz6AWhzsrcebkS5aJA', category: 'bigdata', tags: ['大数据', 'HDFS']},
+    /** 02 **/
+    {title: 'JWT库生成Token的使用与原理', date: '2021-02-01', url: 'https://mp.weixin.qq.com/s/RJDzQvB5hOmjqGB8BV02KQ', category: 'java', tags: ['java']},
+    /** 01 **/
+    {title: 'BCryptPasswordEncoder的使用及原理', date: '2021-01-25', url: 'https://mp.weixin.qq.com/s/P4-y76mX70EC6ba6s_Og3A', category: 'java', tags: ['java']},
+    {title: 'Java 项目中几个必不可少的小功能', date: '2021-01-18', url: 'https://mp.weixin.qq.com/s/WvwtClRqUOYrYKBaXfvNeQ', category: 'java', tags: ['java']},
+    {title: 'Redis | 慢查询', date: '2021-01-11', url: 'https://mp.weixin.qq.com/s/RcifOpNdPw4WWntHNl3aeA', category: 'bigdata', tags: ['大数据', 'Redis']},
+    {title: 'Redis | 事物源码阅读 —— watch', date: '2021-01-02', url: 'https://mp.weixin.qq.com/s/58_r8JxhY36FWLZemg2kRQ', category: 'bigdata', tags: ['大数据', 'Redis']},
     
     ////////////////////////////////////////////////////////////////////////////////
     /** 2020 **/
@@ -89,8 +96,28 @@ const articles = [
     
     ////////////////////////////////////////////////////////////////////////////////
     /** 2019 **/
+    /** 10 **/
+    {title: 'JeeSite | 保存信息修改记录', date: '2019-10-14', url: 'https://mp.weixin.qq.com/s/PCPGcdxrQU-849TbRSZvwg', category: 'java', tags: ['java', 'JeeSite']},
+    {title: '在 Web 中获取 MAC 地址', date: '2019-10-13', url: 'https://mp.weixin.qq.com/s/VFtgb3Rut-mr6xMi0ZHpjA', category: 'security', tags: ['C\C++', '信息安全']},
+    {title: 'STS 创建 Maven 项目填坑', date: '2019-10-12', url: 'https://mp.weixin.qq.com/s/ScoG67kUWT0V14EjTML4ww', category: 'java', tags: ['java']},
+    {title: 'MyBatis 构造动态 SQL 语句', date: '2019-10-11', url: 'https://mp.weixin.qq.com/s/CB9BuzsjI7VYYgZSorL0GA', category: 'java', tags: ['java']},
+    {title: 'PHP 源码学习 | 变量类型数据结构', date: '2019-10-10', url: 'https://mp.weixin.qq.com/s/Gz8lE06Aqg6KJT1vWMQwjw', category: 'php', tags: ['php']},
+    {title: 'Arrays 的二分查找', date: '2019-10-09', url: 'https://mp.weixin.qq.com/s/48AxyeKzpZGxGr3lNEB8MA', category: 'java', tags: ['java']},
+    {title: 'JeeSite | Excel 导入导出', date: '2019-10-08', url: 'https://mp.weixin.qq.com/s/V9sgAZheXWjlXfBqgeJofg', category: 'java', tags: ['java', 'JeeSite']},
+    {title: 'LeetCode | 2 的幂', date: '2019-10-06', url: 'https://mp.weixin.qq.com/s/HD0cwzVN2Wz-xVUHgWmVgQ', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'LeetCode | 机器人能否返回原点', date: '2019-10-03', url: 'https://mp.weixin.qq.com/s/rWSqmPxiufFIGcFNkc7fCg', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'LeetCode | 实现strStr()', date: '2019-10-01', url: 'https://mp.weixin.qq.com/s/F-4fl-JSPtTey3TeZWWpLA', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    /** 09 **/
+    {title: '数据防泄漏 | 禁止PrintScreen键', date: '2019-09-26', url: 'https://mp.weixin.qq.com/s/gcHSKZNINcpZOuT5pXXz3w', category: 'security', tags: ['C\C++', '软件安全']},
+    {title: 'JeeSite | 数据权限应用', date: '2019-09-22', url: 'https://mp.weixin.qq.com/s/xEh3L4DAnDhPqYwHZyqdHQ', category: 'java', tags: ['java', 'JeeSite']},
+    {title: '绕过磊科路由器登录密码', date: '2019-09-20', url: 'https://mp.weixin.qq.com/s/ltQhsPvaHwUY77zuvI9YnA', category: 'security', tags: ['C\C++', '软件安全']},
+    {title: '有效的括号', date: '2019-09-17', url: 'https://mp.weixin.qq.com/s/sn77g7cg_sy2kqQN71nziA', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'PHP 扩展与 ZEND 引擎的整合', date: '2019-09-15', url: 'https://mp.weixin.qq.com/s/EGryacmMRvZy7W5Ik3ZttQ', category: 'php', tags: ['php']},
+    {title: '计算两数之和', date: '2019-09-11', url: 'https://mp.weixin.qq.com/s/vCb4Ya9gdLBUgmBemqI8Sw', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'PHP扩展开发模块开发实例', date: '2019-09-08', url: 'https://mp.weixin.qq.com/s/Cl2Ch39jZi2XLAncr2vCmg', category: 'php', tags: ['php']},
     /** 08 **/
-    {title: 'IEEE 二进制浮点数的表示', date: '2019-08-12', url: 'https://mp.weixin.qq.com/s/XgptFILIDfLqYsKlaiIcgA', category: 'cpp', tags: ['C\C++'], columns: ['C\C++']},    
+    {title: '用 PHP 函数变量数组改变代码结构', date: '2019-08-28', url: 'https://mp.weixin.qq.com/s/jvXozCkvpBlyB2F2vUEKEg', category: 'php', tags: ['php']},
+    {title: 'IEEE 二进制浮点数的表示', date: '2019-08-12', url: 'https://mp.weixin.qq.com/s/XgptFILIDfLqYsKlaiIcgA', category: 'cpp', tags: ['C\C++'], columns: ['C\C++']},
     {title: 'PHP 扩展开发初探', date: '2019-08-09', url: 'https://mp.weixin.qq.com/s/18BWsg7qZ3UpTyIAZ_c3QQ', category: 'php', tags: ['php']}
 ];
 
