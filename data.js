@@ -96,7 +96,24 @@ const articles = [
     
     ////////////////////////////////////////////////////////////////////////////////
     /** 2019 **/
+    /** 12 **/
+    /** 11 **/
+    {title: '分享学习 PHP 源码的方法', date: '2019-11-10', url: 'https://mp.weixin.qq.com/s/QgFhXB9FGuxPVmdkmUl34w', category: 'php', tags: ['php']},
+    {title: '用二进制写程序，提升装 X 境界', date: '2019-11-07', url: 'https://mp.weixin.qq.com/s/5h7G0Dwtl4eZXn_S-_BZVQ', category: 'other', tags: ['其他']},
+    {title: '对学习态度的反思', date: '2019-11-02', url: 'https://mp.weixin.qq.com/s/Epma0Fy2rMa_q6y1x5UcxQ', category: 'other', tags: ['其他']},
     /** 10 **/
+    {title: '站长必须要了解的网络安全法', date: '2019-10-31', url: 'https://mp.weixin.qq.com/s/uLiftv1EMQAq427BfzVEhQ', category: 'security', tags: ['信息安全']},
+    {title: '从数据表字段 float 和 double 说起', date: '2019-10-29', url: 'https://mp.weixin.qq.com/s/u9urKw-83NtBYxS-HGwFPA', category: 'other', tags: ['其他', 'C\C++']},
+    {title: 'Socket 编程', date: '2019-10-28', url: 'https://mp.weixin.qq.com/s/vJkKLJLiiGoq7pm8I8y4Vw', category: 'cpp', tags: ['C\C++', '网络编程']},
+    {title: 'Web 获取 MAC 地址', date: '2019-10-25', url: 'https://mp.weixin.qq.com/s/2IytWodvfu_XrMkBAaZAfQ', category: 'other', tags: ['其他', 'C\C++']},
+    {title: '一个只有十多行代码的 C 语言问题', date: '2019-10-24', url: 'https://mp.weixin.qq.com/s/al26tYGe3uhGKWPaMAn-Dg', category: 'cpp', tags: ['C\C++']},
+    {title: 'PHP 管理树莓派', date: '2019-10-23', url: 'https://mp.weixin.qq.com/s/UBADOlMVABeCAyyLCX26EQ', category: 'php', tags: ['php']},
+    {title: 'JeeSite | 访问控制权限', date: '2019-10-22', url: 'https://mp.weixin.qq.com/s/rs57GDGelHvUGPcbCu-SFQ', category: 'java', tags: ['java', 'JeeSite']},
+    {title: 'JeeSite | 数据分页与翻页', date: '2019-10-21', url: 'https://mp.weixin.qq.com/s/16Wu7-JM4kFkIwWuaQ5Z5Q', category: 'java', tags: ['java', 'JeeSite']},
+    {title: 'JeeSite 内容汇总', date: '2019-10-20', url: 'https://mp.weixin.qq.com/s/2IOhAmJHxZ3Tg2qMxk7GSA', category: 'java', tags: ['java', 'JeeSite']},
+    {title: 'JeeSite | 保存信息修改记录封装', date: '2019-10-19', url: 'https://mp.weixin.qq.com/s/ak8HQC5aRB1rJR0utE9Whg', category: 'java', tags: ['java', 'JeeSite']},
+    {title: '植物大战僵尸辅助', date: '2019-10-18', url: 'https://mp.weixin.qq.com/s/CE0vPdEUrX0lbZd-NfHNBg', category: 'cpp', tags: ['C\C++', '单机游戏']},
+    {title: 'Wamp 下运行 CGI 笔记', date: '2019-10-16', url: 'https://mp.weixin.qq.com/s/SmIEB4HUsstEWOTdvobvjw', category: 'cpp', tags: ['C\C++']},
     {title: 'MyBatis-Generator 用法介绍', date: '2019-10-15', url: 'https://mp.weixin.qq.com/s/xW6mmpsf_37aOE17KRHgvw', category: 'java', tags: ['java', 'MyBatis']},
     {title: 'JeeSite | 保存信息修改记录', date: '2019-10-14', url: 'https://mp.weixin.qq.com/s/PCPGcdxrQU-849TbRSZvwg', category: 'java', tags: ['java', 'JeeSite']},
     {title: '在 Web 中获取 MAC 地址', date: '2019-10-13', url: 'https://mp.weixin.qq.com/s/VFtgb3Rut-mr6xMi0ZHpjA', category: 'security', tags: ['C\C++', '信息安全']},
