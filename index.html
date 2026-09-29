@@ -82,7 +82,6 @@
             transition: background-color 0.25s ease, color 0.25s ease;
         }
 
-        /* ========== 顶部粘性导航 ========== */
         .topnav {
             position: sticky;
             top: 0;
@@ -435,8 +434,23 @@
             border-bottom: 1px solid var(--divider);
             padding-bottom: 0.5rem;
             display: flex;
-            align-items: baseline;
+            align-items: center;
             justify-content: space-between;
+            gap: 0.75rem;
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.15s ease;
+        }
+
+        .section-title:hover {
+            opacity: 0.85;
+        }
+
+        .section-title-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
         }
 
         .section-title .count-badge {
@@ -448,6 +462,51 @@
             border-radius: 20px;
             text-transform: none;
             letter-spacing: 0;
+        }
+
+        .section-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            font-family: inherit;
+            color: var(--text-muted);
+            background: transparent;
+            border: 1px solid var(--divider-light);
+            border-radius: 20px;
+            padding: 0.15rem 0.6rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            flex-shrink: 0;
+        }
+
+        .section-toggle:hover {
+            color: var(--hover-blue);
+            border-color: var(--divider);
+            background: var(--divider-faint);
+        }
+
+        .section-toggle .arrow {
+            display: inline-block;
+            font-size: 0.6rem;
+            transition: transform 0.2s ease;
+        }
+
+        .section-toggle[data-expanded="false"] .arrow {
+            transform: rotate(-90deg);
+        }
+
+        .section.is-collapsed {
+            margin-bottom: 1.25rem;
+        }
+
+        .section.is-collapsed .section-body {
+            display: none;
+        }
+
+        .section.is-collapsed .section-title {
+            margin-bottom: 0;
+            padding-bottom: 0.6rem;
         }
 
         .section.is-empty {
@@ -955,6 +1014,10 @@
             .back-top .label {
                 display: none;
             }
+
+            .section-toggle .label {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -1164,39 +1227,71 @@
             if (!bodyEl) return;
 
             bodyEl.innerHTML = `
-                <div class="section" id="section-category-${groupKey}">
-                    <div class="section-title">
-                        <span>🏷️ 按类型</span>
-                        <span class="count-badge" id="category-count-badge-${groupKey}"></span>
+                <div class="section" id="section-category-${groupKey}" data-section-key="${groupKey}-category">
+                    <div class="section-title" data-toggle-section="section-category-${groupKey}">
+                        <div class="section-title-left">
+                            <span>🏷️ 按类型</span>
+                            <span class="count-badge" id="category-count-badge-${groupKey}"></span>
+                        </div>
+                        <button class="section-toggle" type="button" data-toggle-section="section-category-${groupKey}" data-expanded="true" aria-label="折叠/展开">
+                            <span class="label">收起</span>
+                            <span class="arrow">▾</span>
+                        </button>
                     </div>
-                    <div class="masonry" id="masonry-category-${groupKey}"></div>
-                </div>
-
-                <div class="section" id="section-column-${groupKey}">
-                    <div class="section-title">
-                        <span>📖 按专栏</span>
-                        <span class="count-badge" id="column-count-badge-${groupKey}"></span>
-                    </div>
-                    <div class="masonry" id="masonry-column-${groupKey}"></div>
-                    <div class="empty-note" style="margin-top: 1.5rem; font-size: 0.8rem; font-style: normal; color: #94a3b8;">
-                        ⚡ 专栏是系列内容的聚合，一项可属于多个专栏
+                    <div class="section-body">
+                        <div class="masonry" id="masonry-category-${groupKey}"></div>
                     </div>
                 </div>
 
-                <div class="section" id="section-tag-${groupKey}">
-                    <div class="section-title">
-                        <span>🔖 按标签</span>
-                        <span class="count-badge" id="tag-count-badge-${groupKey}"></span>
+                <div class="section" id="section-column-${groupKey}" data-section-key="${groupKey}-column">
+                    <div class="section-title" data-toggle-section="section-column-${groupKey}">
+                        <div class="section-title-left">
+                            <span>📖 按专栏</span>
+                            <span class="count-badge" id="column-count-badge-${groupKey}"></span>
+                        </div>
+                        <button class="section-toggle" type="button" data-toggle-section="section-column-${groupKey}" data-expanded="true" aria-label="折叠/展开">
+                            <span class="label">收起</span>
+                            <span class="arrow">▾</span>
+                        </button>
                     </div>
-                    <div class="masonry" id="masonry-tag-${groupKey}"></div>
+                    <div class="section-body">
+                        <div class="masonry" id="masonry-column-${groupKey}"></div>
+                        <div class="empty-note" style="margin-top: 1.5rem; font-size: 0.8rem; font-style: normal; color: #94a3b8;">
+                            ⚡ 专栏是系列内容的聚合，一项可属于多个专栏
+                        </div>
+                    </div>
                 </div>
 
-                <div class="section" id="section-timeline-${groupKey}">
-                    <div class="section-title">
-                        <span>🕒 按时间</span>
-                        <span class="count-badge">最新优先</span>
+                <div class="section" id="section-tag-${groupKey}" data-section-key="${groupKey}-tag">
+                    <div class="section-title" data-toggle-section="section-tag-${groupKey}">
+                        <div class="section-title-left">
+                            <span>🔖 按标签</span>
+                            <span class="count-badge" id="tag-count-badge-${groupKey}"></span>
+                        </div>
+                        <button class="section-toggle" type="button" data-toggle-section="section-tag-${groupKey}" data-expanded="true" aria-label="折叠/展开">
+                            <span class="label">收起</span>
+                            <span class="arrow">▾</span>
+                        </button>
                     </div>
-                    <div id="timeline-container-${groupKey}"></div>
+                    <div class="section-body">
+                        <div class="masonry" id="masonry-tag-${groupKey}"></div>
+                    </div>
+                </div>
+
+                <div class="section" id="section-timeline-${groupKey}" data-section-key="${groupKey}-timeline">
+                    <div class="section-title" data-toggle-section="section-timeline-${groupKey}">
+                        <div class="section-title-left">
+                            <span>🕒 按时间</span>
+                            <span class="count-badge">最新优先</span>
+                        </div>
+                        <button class="section-toggle" type="button" data-toggle-section="section-timeline-${groupKey}" data-expanded="true" aria-label="折叠/展开">
+                            <span class="label">收起</span>
+                            <span class="arrow">▾</span>
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        <div id="timeline-container-${groupKey}"></div>
+                    </div>
                 </div>
 
                 <div class="no-results" id="no-results-${groupKey}">
@@ -1474,6 +1569,10 @@
                 if (parentBlock && parentBlock.classList.contains('is-collapsed')) {
                     return;
                 }
+                const parentSection = container.closest('.section');
+                if (parentSection && parentSection.classList.contains('is-collapsed')) {
+                    return;
+                }
                 container.classList.remove('is-ready');
                 requestAnimationFrame(() => {
                     layoutMasonry(container, 24);
@@ -1523,6 +1622,7 @@
             try { localStorage.setItem(key, val); } catch (e) { /* 忽略 */ }
         }
 
+        /* ========== 大区块折叠 ========== */
         function applyBlockState(blockEl, expanded) {
             const toggleBtn = blockEl.querySelector('.block-toggle');
             if (expanded) {
@@ -1562,6 +1662,71 @@
 
                 applyBlockState(blockEl, nextExpanded);
                 safeSet('block-' + blockEl.dataset.blockKey, nextExpanded ? 'expanded' : 'collapsed');
+
+                if (nextExpanded) {
+                    requestAnimationFrame(() => {
+                        initAllMasonry();
+                    });
+                }
+            });
+        }
+
+        /* ========== 子区块（section）折叠 ========== */
+        function applySectionState(sectionEl, expanded) {
+            const toggleBtn = sectionEl.querySelector('.section-toggle');
+            if (expanded) {
+                sectionEl.classList.remove('is-collapsed');
+                if (toggleBtn) {
+                    toggleBtn.dataset.expanded = 'true';
+                    toggleBtn.querySelector('.label').textContent = '收起';
+                }
+            } else {
+                sectionEl.classList.add('is-collapsed');
+                if (toggleBtn) {
+                    toggleBtn.dataset.expanded = 'false';
+                    toggleBtn.querySelector('.label').textContent = '展开';
+                }
+            }
+        }
+
+        function initSectionCollapse() {
+            // 初始化时读取每个 section 的保存状态
+            // 如果 localStorage 里没有保存过，则使用默认值：
+            //   - 按时间（*-timeline）默认展开
+            //   - 按类型 / 按专栏 / 按标签 默认收起
+            document.querySelectorAll('.section[data-section-key]').forEach(sectionEl => {
+                const key = sectionEl.dataset.sectionKey;
+                const saved = safeGet('section-' + key);
+
+                let expanded;
+                if (saved === 'collapsed') {
+                    expanded = false;
+                } else if (saved === 'expanded') {
+                    expanded = true;
+                } else {
+                    // 没有保存过 → 使用默认值
+                    // 只有 timeline 结尾的默认展开，其余默认收起
+                    expanded = key.endsWith('-timeline');
+                }
+
+                applySectionState(sectionEl, expanded);
+            });
+
+            // 事件委托：点击标题栏任意位置（或折叠按钮）切换
+            document.addEventListener('click', function (e) {
+                if (e.target.closest('[data-back-top]')) return;
+
+                const trigger = e.target.closest('[data-toggle-section]');
+                if (!trigger) return;
+
+                const sectionEl = document.getElementById(trigger.dataset.toggleSection);
+                if (!sectionEl) return;
+
+                const isCollapsed = sectionEl.classList.contains('is-collapsed');
+                const nextExpanded = isCollapsed;
+
+                applySectionState(sectionEl, nextExpanded);
+                safeSet('section-' + sectionEl.dataset.sectionKey, nextExpanded ? 'expanded' : 'collapsed');
 
                 if (nextExpanded) {
                     requestAnimationFrame(() => {
@@ -1656,7 +1821,14 @@
                 return;
             }
 
-            // 搜索状态
+            // 搜索状态：自动展开被收起的 section
+            document.querySelectorAll('.section[data-section-key]').forEach(sectionEl => {
+                if (sectionEl.classList.contains('is-collapsed')) {
+                    applySectionState(sectionEl, true);
+                }
+            });
+
+            // 搜索状态：自动展开被收起的大区块
             document.querySelectorAll('.block[data-block-key="articles"], .block[data-block-key="bilibili"]').forEach(blockEl => {
                 if (blockEl.classList.contains('is-collapsed')) {
                     applyBlockState(blockEl, true);
@@ -1880,6 +2052,7 @@
         window.addEventListener('load', function () {
             renderAll();
             initBlockCollapse();
+            initSectionCollapse();
             initToggle();
             initBackTop();
             initSearch();

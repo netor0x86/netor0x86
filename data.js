@@ -97,10 +97,11 @@ const articles = [
     ////////////////////////////////////////////////////////////////////////////////
     /** 2019 **/
     /** 10 **/
+    {title: 'MyBatis-Generator 用法介绍', date: '2019-10-15', url: 'https://mp.weixin.qq.com/s/xW6mmpsf_37aOE17KRHgvw', category: 'java', tags: ['java', 'MyBatis']},
     {title: 'JeeSite | 保存信息修改记录', date: '2019-10-14', url: 'https://mp.weixin.qq.com/s/PCPGcdxrQU-849TbRSZvwg', category: 'java', tags: ['java', 'JeeSite']},
     {title: '在 Web 中获取 MAC 地址', date: '2019-10-13', url: 'https://mp.weixin.qq.com/s/VFtgb3Rut-mr6xMi0ZHpjA', category: 'security', tags: ['C\C++', '信息安全']},
     {title: 'STS 创建 Maven 项目填坑', date: '2019-10-12', url: 'https://mp.weixin.qq.com/s/ScoG67kUWT0V14EjTML4ww', category: 'java', tags: ['java']},
-    {title: 'MyBatis 构造动态 SQL 语句', date: '2019-10-11', url: 'https://mp.weixin.qq.com/s/CB9BuzsjI7VYYgZSorL0GA', category: 'java', tags: ['java']},
+    {title: 'MyBatis 构造动态 SQL 语句', date: '2019-10-11', url: 'https://mp.weixin.qq.com/s/CB9BuzsjI7VYYgZSorL0GA', category: 'java', tags: ['java', 'MyBatis']},
     {title: 'PHP 源码学习 | 变量类型数据结构', date: '2019-10-10', url: 'https://mp.weixin.qq.com/s/Gz8lE06Aqg6KJT1vWMQwjw', category: 'php', tags: ['php']},
     {title: 'Arrays 的二分查找', date: '2019-10-09', url: 'https://mp.weixin.qq.com/s/48AxyeKzpZGxGr3lNEB8MA', category: 'java', tags: ['java']},
     {title: 'JeeSite | Excel 导入导出', date: '2019-10-08', url: 'https://mp.weixin.qq.com/s/V9sgAZheXWjlXfBqgeJofg', category: 'java', tags: ['java', 'JeeSite']},
