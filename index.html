@@ -69,11 +69,9 @@
 
         html {
             scroll-behavior: smooth;
-            /* 锚点跳转时给顶部粘性导航留出空间 */
             scroll-padding-top: 80px;
         }
 
-        /* 关键修复：body 不再用 flex 居中，改由 .index-container 自己 margin auto */
         body {
             background-color: var(--bg);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -178,7 +176,6 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* 内容容器：用 margin auto 自己居中 */
         .index-container {
             max-width: 1100px;
             width: 100%;
@@ -296,10 +293,8 @@
             display: block;
         }
 
-        /* ========== 大区块 ========== */
         .block {
             margin-bottom: 3.5rem;
-            /* 让锚点跳转时不会被顶部导航遮住 */
             scroll-margin-top: 76px;
         }
 
@@ -965,7 +960,6 @@
 </head>
 <body>
 
-    <!-- ========== 顶部粘性导航 ========== -->
     <nav class="topnav" id="topnav">
         <div class="topnav-inner">
             <span class="topnav-brand">👋 我的主页</span>
@@ -1414,9 +1408,6 @@
                 + projects.length + ' 个开源作品';
         }
 
-        /* ============================================================
-           瀑布流布局
-           ============================================================ */
         function layoutMasonry(container, gap) {
             if (!container) return;
             const items = Array.from(container.children).filter(el => {
@@ -1490,9 +1481,6 @@
             });
         }
 
-        /* ============================================================
-           卡片内「展开/收起」
-           ============================================================ */
         function initToggle() {
             document.addEventListener('click', function (e) {
                 const btn = e.target.closest('.toggle-btn');
@@ -1528,9 +1516,6 @@
             });
         }
 
-        /* ============================================================
-           大区块折叠
-           ============================================================ */
         function safeGet(key) {
             try { return localStorage.getItem(key); } catch (e) { return null; }
         }
@@ -1564,7 +1549,6 @@
             });
 
             document.addEventListener('click', function (e) {
-                // 先判断是不是回顶部按钮，是的话不处理折叠
                 if (e.target.closest('[data-back-top]')) return;
 
                 const trigger = e.target.closest('[data-toggle-block]');
@@ -1587,9 +1571,6 @@
             });
         }
 
-        /* ============================================================
-           回顶部（用 JS 滚到绝对顶部，不受 sticky 影响）
-           ============================================================ */
         function initBackTop() {
             document.addEventListener('click', function (e) {
                 const btn = e.target.closest('[data-back-top]');
@@ -1599,9 +1580,6 @@
             });
         }
 
-        /* ============================================================
-           顶部导航：滚动高亮当前区块
-           ============================================================ */
         function initNavHighlight() {
             const navLinks = document.querySelectorAll('.topnav-link[data-nav-target]');
             if (navLinks.length === 0) return;
@@ -1655,6 +1633,57 @@
 
             document.getElementById('block-projects').classList.toggle('is-hidden', isSearching);
 
+            // ============ 每次进入 applySearch 先做全量重置 ============
+            // 1. 所有卡片恢复显示
+            document.querySelectorAll('.list-card, .tag-card, .month-card, .column-card').forEach(card => {
+                card.classList.remove('is-hidden');
+            });
+            // 2. 所有条目清除搜索过滤标记
+            document.querySelectorAll('.article-item').forEach(item => {
+                item.classList.remove('is-filtered');
+            });
+            // 3. 所有年份块恢复显示
+            document.querySelectorAll('.year-block').forEach(yb => {
+                yb.classList.remove('is-empty');
+            });
+            // 4. 所有 no-results 恢复隐藏
+            document.querySelectorAll('.no-results').forEach(el => {
+                el.classList.remove('is-visible');
+            });
+            // 5. 所有折叠按钮恢复显示（搜索时再隐藏）
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.style.display = '';
+            });
+
+            // ============ 非搜索状态：恢复折叠 + 重新布局 ============
+            if (!isSearching) {
+                // 清除搜索时临时展开文章留下的状态（把超过阈值的重新折叠）
+                restoreCollapseState();
+                hintEl.innerHTML = '';
+                updateSectionsVisibility();
+                requestAnimationFrame(() => initAllMasonry());
+                return;
+            }
+
+            // ============ 搜索状态 ============
+            // 1. 搜索时自动展开被收起的内容大类
+            document.querySelectorAll('.block[data-block-key="articles"], .block[data-block-key="bilibili"]').forEach(blockEl => {
+                if (blockEl.classList.contains('is-collapsed')) {
+                    applyBlockState(blockEl, true);
+                }
+            });
+
+            // 2. 搜索时临时显示所有条目（取消折叠）
+            document.querySelectorAll('.article-item').forEach(item => {
+                item.classList.remove('is-hidden');
+            });
+
+            // 3. 搜索时隐藏所有折叠按钮
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.style.display = 'none';
+            });
+
+            // 4. 逐个内容大类过滤
             function getCatName(groupKey, item) {
                 const meta = groupKey === 'articles' ? articleCategoryMeta : videoCategoryMeta;
                 return (meta[item.category] && meta[item.category].name) || '';
@@ -1664,34 +1693,6 @@
                 { key: 'articles', items: articles, meta: articleCategoryMeta, blockId: 'block-articles' },
                 { key: 'bilibili', items: bilibiliVideos, meta: videoCategoryMeta, blockId: 'block-bilibili' }
             ];
-
-            document.querySelectorAll('.list-card, .tag-card, .month-card, .column-card').forEach(card => {
-                card.classList.remove('is-hidden');
-            });
-            document.querySelectorAll('.article-item').forEach(item => {
-                item.classList.remove('is-filtered');
-                if (isSearching) {
-                    item.classList.remove('is-hidden');
-                }
-            });
-            document.querySelectorAll('.toggle-btn').forEach(btn => {
-                btn.style.display = isSearching ? 'none' : '';
-            });
-
-            if (!isSearching) {
-                restoreCollapseState();
-                hintEl.innerHTML = '';
-                document.querySelectorAll('.no-results').forEach(el => el.classList.remove('is-visible'));
-                updateSectionsVisibility();
-                requestAnimationFrame(() => initAllMasonry());
-                return;
-            }
-
-            document.querySelectorAll('.block[data-block-key="articles"], .block[data-block-key="bilibili"]').forEach(blockEl => {
-                if (blockEl.classList.contains('is-collapsed')) {
-                    applyBlockState(blockEl, true);
-                }
-            });
 
             groups.forEach(g => {
                 const blockEl = document.getElementById(g.blockId);
@@ -1730,11 +1731,13 @@
                     }
                 });
 
+                // 年份块：如果该年份下所有月份卡片都隐藏了，则隐藏
                 blockEl.querySelectorAll('.year-block').forEach(yb => {
                     const visibleCards = yb.querySelectorAll('.month-card:not(.is-hidden)');
                     yb.classList.toggle('is-empty', visibleCards.length === 0);
                 });
 
+                // 该大类是否有匹配
                 const totalMatched = blockEl.querySelectorAll('.article-item:not(.is-filtered)').length;
                 const noResultsEl = document.getElementById('no-results-' + g.key);
                 if (noResultsEl) {
@@ -1742,6 +1745,7 @@
                 }
             });
 
+            // 全局统计
             const totalMatched = document.querySelectorAll('.article-item:not(.is-filtered)').length;
             if (totalMatched === 0) {
                 hintEl.innerHTML = '';
@@ -1827,9 +1831,6 @@
             });
         }
 
-        /* ============================================================
-           深色模式
-           ============================================================ */
         function initTheme() {
             const toggleBtn = document.getElementById('theme-toggle');
             const root = document.documentElement;
@@ -1882,9 +1883,6 @@
             }
         }
 
-        /* ============================================================
-           初始化
-           ============================================================ */
         function renderAll() {
             renderProjects();
             renderContentBlock('articles', articles, articleCategoryMeta, document.getElementById('articles-body'));
