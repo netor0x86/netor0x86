@@ -24,6 +24,7 @@ const articleCategoryMeta = {
     review:      {name: '📦 每月复盘'},
     other:       {name: '💡 其他内容'},
     security:    {name: '软件安全'},
+    bigdata:     {name: '大数据'},
 };
 
 const articles = [
@@ -56,6 +57,13 @@ const articles = [
     
 
     {title: 'C 语言的位运算例子——解析标志寄存器', date: '2025-04-06', url: 'https://mp.weixin.qq.com/s/BtonmyPd5fhru0H_ueQbng', category: 'cpp', tags: ['C\C++'], columns: ['C\C++']},
+    
+    {title: 'Windows 平台下 IDA 远程调试 Linux 可执行文件', date: '2024-12-02', url: 'https://mp.weixin.qq.com/s/EBMVviVQtj4WBCHgM8kE9A', category: 'reverse', tags: ['逆向工程', 'IDA']},
+    
+    {title: 'PHP 的 shuffle 函数不能用于洗牌算法？', date: '2023-12-27', url: 'https://mp.weixin.qq.com/s/qdoyN0WcaUpaMoKHs1-BaQ', category: 'php', tags: ['php']},
+    {title: '【JVM 札记】浅谈 JVM', date: '2022-12-19', url: 'https://mp.weixin.qq.com/s/o4skvv9yVUQZ2Tv0nD4Zcg', category: 'java', tags: ['java', 'JVM']},
+    {title: '大数据 | HDFS 元数据持久化笔记', date: '2021-11-29', url: 'https://mp.weixin.qq.com/s/INxxlz6AWhzsrcebkS5aJA', category: 'bigdata', tags: ['大数据', 'HDFS']},
+    {title: 'Redis | Redis 的事务一', date: '2020-11-24', url: 'https://mp.weixin.qq.com/s/oV54IRXNsYmQNKjyVuaqWg', category: 'bigdata', tags: ['大数据', 'Redis']},
     
 
     
