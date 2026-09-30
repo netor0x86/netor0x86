@@ -15,16 +15,15 @@ const projects = [
 /* ============ 二、公众号文章 ============ */
 const articleCategoryMeta = {
     reverse:     {name: '📚 逆向工程'},
-    writing:     {name: '✍️ 写作思考'},
+    emb:     {name: '✍️ 嵌入式'},
     php:         {name: '⚙️ PHP'},
     java:        {name: '🧠 Java'},
     cpp:         {name: '🧠 C\C++'},
-    emb:         {name: '嵌入式'},
     datastruct:  {name: '🎬 数据结构与算法'},
-    review:      {name: '📦 每月复盘'},
+    security:      {name: '📦 软件安全'},
     other:       {name: '💡 其他内容'},
-    security:    {name: '软件安全'},
     bigdata:     {name: '大数据'},
+    ops:     {name: '运维'},
 };
 
 const articles = [
@@ -151,8 +150,21 @@ const articles = [
     {title: 'Redis | Redis 的事务一', date: '2020-11-24', url: 'https://mp.weixin.qq.com/s/oV54IRXNsYmQNKjyVuaqWg', category: 'bigdata', tags: ['大数据', 'Redis']},
     /** 10 **/
     /** 09 **/
+    {title: '鸿蒙系统开源', date: '2020-09-11', url: 'https://mp.weixin.qq.com/s/oT24mSs98vLQs2RmCTNYjg', category: 'other', tags:  ['其他']},
+    {title: 'LeetCode | 35.搜索插入位置', date: '2020-09-10', url: 'https://mp.weixin.qq.com/s/7jT48TUPOmHX6jueRw_Muw', category: 'datastruct', tags:  ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'Redis | 源码阅读 —— 字符串', date: '2020-09-10', url: 'https://mp.weixin.qq.com/s/L9TOxMGPDGaN_8K7bnpOEA', category: 'bigdata', tags:  ['大数据', 'Redis']},
+    {title: 'LeetCode | 28.实现strStr()', date: '2020-09-06', url: 'https://mp.weixin.qq.com/s/PXjKCLxy6Irl2NsP4sc35Q', category: 'datastruct', tags:  ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'Redis | Redis 哈希相关命令', date: '2020-09-06', url: 'https://mp.weixin.qq.com/s/_RjLCaKWJqucSAJSfwarlA', category: 'bigdata', tags: ['大数据', 'Redis']},
     /** 08 **/
-    
+    {title: 'Redis | Redis 有序集合相关命令', date: '2020-08-29', url: 'https://mp.weixin.qq.com/s/aYRhvFORO3sYzQtxJ5Qt1g', category: 'bigdata', tags: ['大数据', 'Redis']},
+    {title: 'Dubbo框架的Hello World', date: '2020-08-22', url: 'https://mp.weixin.qq.com/s/eeSsc7_qF0fHtuviRZOXgQ', category: 'java', tags: ['java', '微服务']},
+    {title: 'LeetCode | 102.二叉树的层次遍历', date: '2020-08-22', url: 'https://mp.weixin.qq.com/s/XHYrg_2ry4pGkHMFXBW4hw', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'Nginx | Nginx增加模块', date: '2020-08-15', url: 'https://mp.weixin.qq.com/s/vQtjNMIllq-R7HqyjMIcTg', category: 'ops', tags: ['运维', 'Nginx']},
+    {title: 'Nginx | Nginx的介绍和安装', date: '2020-08-15', url: 'https://mp.weixin.qq.com/s/4_H0i9R2smkJPrclUHDNFw', category: 'ops', tags: ['运维', 'Nginx']},
+    {title: 'LeetCode | 100.相同的树', date: '2020-08-15', url: 'https://mp.weixin.qq.com/s/AJeF-OaAXRliJ04vTuGOVQ', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
+    {title: 'Redis | Redis 集合相关命令', date: '2020-08-09', url: 'https://mp.weixin.qq.com/s/rfjS5qDDtjW7AJzfhHTGJw', category: 'bigdata', tags: ['大数据', 'Redis']},
+    {title: 'Redis | Redis 列表相关命令', date: '2020-08-02', url: 'https://mp.weixin.qq.com/s/eYooFO7o3yLWGE1dS1ulWA', category: 'bigdata', tags: ['大数据', 'Redis']},
+    {title: 'properties和yaml配置文件', date: '2020-08-01', url: 'https://mp.weixin.qq.com/s/R-KvRa0I2SHWiK4e2tyrEw', category: 'java', tags: ['java']},
     /** 07 **/
     {title: 'IDEA 下 SpringBoot 自动重启', date: '2020-07-25', url: 'https://mp.weixin.qq.com/s/3d8xrAJwOvS0ELJo-aQIxQ', category: 'other', tags: ['其他', 'java']},
     {title: 'LeetCode | 21.合并两个有序链表', date: '2020-07-25', url: 'https://mp.weixin.qq.com/s/Jr1MhdetUw7NH4oi1cha9Q', category: 'datastruct', tags: ['C\C++', '数据结构与算法', 'leetcode'], columns: ['leetcode']},
