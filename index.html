@@ -345,6 +345,35 @@
             flex-shrink: 0;
         }
 
+        /* 主页链接按钮 */
+        .home-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            font-size: 0.78rem;
+            font-family: inherit;
+            color: var(--text-muted);
+            background: var(--badge-bg);
+            border: 1px solid var(--divider-light);
+            border-radius: 20px;
+            padding: 0.2rem 0.7rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .home-link:hover {
+            color: var(--hover-blue);
+            border-color: var(--divider);
+            background: var(--divider-faint);
+        }
+
+        .home-link .icon {
+            font-size: 0.8rem;
+        }
+
         .block-toggle {
             display: inline-flex;
             align-items: center;
@@ -1018,6 +1047,10 @@
             .section-toggle .label {
                 display: none;
             }
+
+            .home-link .label {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -1063,6 +1096,9 @@
                     <span class="block-sub" id="project-count-badge"></span>
                 </div>
                 <div class="block-header-actions">
+                    <a class="home-link" href="#" data-home-link="github" target="_blank" rel="noopener noreferrer" title="打开 GitHub 主页">
+                        <span class="icon">🐙</span><span class="label">主页</span>
+                    </a>
                     <a class="back-top" href="#" data-back-top title="回到顶部">
                         <span class="arrow">↑</span><span class="label">回顶部</span>
                     </a>
@@ -1105,6 +1141,9 @@
                     <span class="block-sub" id="bilibili-count-badge"></span>
                 </div>
                 <div class="block-header-actions">
+                    <a class="home-link" href="#" data-home-link="bilibili" target="_blank" rel="noopener noreferrer" title="打开 B站 主页">
+                        <span class="icon">📺</span><span class="label">主页</span>
+                    </a>
                     <a class="back-top" href="#" data-back-top title="回到顶部">
                         <span class="arrow">↑</span><span class="label">回顶部</span>
                     </a>
@@ -1503,6 +1542,20 @@
                 + projects.length + ' 个开源作品';
         }
 
+        /* ============ 平台主页链接（新增） ============ */
+        function applyProfileLinks() {
+            document.querySelectorAll('[data-home-link]').forEach(el => {
+                const key = el.dataset.homeLink;
+                const url = profileLinks && profileLinks[key];
+                if (url && url !== '#') {
+                    el.href = url;
+                } else {
+                    // 如果没配置，隐藏这个按钮
+                    el.style.display = 'none';
+                }
+            });
+        }
+
         function layoutMasonry(container, gap) {
             if (!container) return;
             const items = Array.from(container.children).filter(el => {
@@ -1650,6 +1703,7 @@
 
             document.addEventListener('click', function (e) {
                 if (e.target.closest('[data-back-top]')) return;
+                if (e.target.closest('[data-home-link]')) return;
 
                 const trigger = e.target.closest('[data-toggle-block]');
                 if (!trigger) return;
@@ -1690,10 +1744,6 @@
         }
 
         function initSectionCollapse() {
-            // 初始化时读取每个 section 的保存状态
-            // 如果 localStorage 里没有保存过，则使用默认值：
-            //   - 按时间（*-timeline）默认展开
-            //   - 按类型 / 按专栏 / 按标签 默认收起
             document.querySelectorAll('.section[data-section-key]').forEach(sectionEl => {
                 const key = sectionEl.dataset.sectionKey;
                 const saved = safeGet('section-' + key);
@@ -1704,17 +1754,15 @@
                 } else if (saved === 'expanded') {
                     expanded = true;
                 } else {
-                    // 没有保存过 → 使用默认值
-                    // 只有 timeline 结尾的默认展开，其余默认收起
                     expanded = key.endsWith('-timeline');
                 }
 
                 applySectionState(sectionEl, expanded);
             });
 
-            // 事件委托：点击标题栏任意位置（或折叠按钮）切换
             document.addEventListener('click', function (e) {
                 if (e.target.closest('[data-back-top]')) return;
+                if (e.target.closest('[data-home-link]')) return;
 
                 const trigger = e.target.closest('[data-toggle-section]');
                 if (!trigger) return;
@@ -1795,7 +1843,6 @@
 
             document.getElementById('block-projects').classList.toggle('is-hidden', isSearching);
 
-            // 全量重置
             document.querySelectorAll('.list-card, .tag-card, .month-card, .column-card').forEach(card => {
                 card.classList.remove('is-hidden');
             });
@@ -1812,7 +1859,6 @@
                 btn.style.display = '';
             });
 
-            // 非搜索状态
             if (!isSearching) {
                 restoreCollapseState();
                 hintEl.innerHTML = '';
@@ -1821,14 +1867,12 @@
                 return;
             }
 
-            // 搜索状态：自动展开被收起的 section
             document.querySelectorAll('.section[data-section-key]').forEach(sectionEl => {
                 if (sectionEl.classList.contains('is-collapsed')) {
                     applySectionState(sectionEl, true);
                 }
             });
 
-            // 搜索状态：自动展开被收起的大区块
             document.querySelectorAll('.block[data-block-key="articles"], .block[data-block-key="bilibili"]').forEach(blockEl => {
                 if (blockEl.classList.contains('is-collapsed')) {
                     applyBlockState(blockEl, true);
@@ -2044,6 +2088,7 @@
             renderContentBlock('articles', articles, articleCategoryMeta, document.getElementById('articles-body'));
             renderContentBlock('bilibili', bilibiliVideos, videoCategoryMeta, document.getElementById('bilibili-body'));
             renderCounts();
+            applyProfileLinks();
             requestAnimationFrame(() => {
                 initAllMasonry();
             });

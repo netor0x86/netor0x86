@@ -2,6 +2,12 @@
    data.js —— 数据维护文件
    ============================================================ */
 
+/* ============ 平台主页地址（新增） ============ */
+const profileLinks = {
+    github:   'https://github.com/netor0x86',       // 改成您的 GitHub 主页
+    bilibili: 'https://space.bilibili.com/3706941194898042'  // 改成您的 B站 主页
+};
+
 const COLLAPSE_THRESHOLD = 3;
 
 /* ============ 一、GitHub 作品 ============ */
