@@ -92,9 +92,38 @@ const articles = [
     /** 09 **/
     /** 08 **/
     /** 07 **/
+    {title: 'C51 单片机开发串口初始化实现', date: '2024-07-05', url: 'https://mp.weixin.qq.com/s/L_32Y-kE6uq1-BhsTMq9zA', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发串口初始化分析', date: '2024-07-03', url: 'https://mp.weixin.qq.com/s/0IBfgdU74EltpLHf8Knviw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发单片机发数据给 PC', date: '2024-07-01', url: 'https://mp.weixin.qq.com/s/CjkzTgMS9PBqRa4rI3lcHQ', category: 'emb', tags: ['嵌入式', 'C51']},
     /** 06 **/
+    {title: 'C51 单片机开发认识串口通信', date: '2024-06-28', url: 'https://mp.weixin.qq.com/s/U48g9SDl2XJ7YFsMMiIpDw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发认识串口', date: '2024-06-26', url: 'https://mp.weixin.qq.com/s/khHjVRe_3qI44S7Xj1Lz1Q', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发超声波测距传感器控制 LED 灯', date: '2024-06-24', url: 'https://mp.weixin.qq.com/s/50j2psaGJJfwFwoVtRLBig', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发认识超声波测距传感器', date: '2024-06-21', url: 'https://mp.weixin.qq.com/s/yMMXm3XEMf0NjxOVDGhf_Q', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发模拟 PWM 控制舵机', date: '2024-06-19', url: 'https://mp.weixin.qq.com/s/Zp4dMVFAeaf_JWV3cQvm0Q', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发认识舵机', date: '2024-06-17', url: 'https://mp.weixin.qq.com/s/f9gOmcgZY4fguIZqVZy6fg', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发认识 PWM', date: '2024-06-14', url: 'https://mp.weixin.qq.com/s/t5PxEsCHoiqq5TZbVhrO9Q', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发中断方式控制 LED', date: '2024-06-10', url: 'https://mp.weixin.qq.com/s/tcvNJmFLPWlMdEHheQrfrA', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发定时器中断寄存器', date: '2024-06-07', url: 'https://mp.weixin.qq.com/s/DjTNNb0wsQYKhq583foOeQ', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发说说中断是什么', date: '2024-06-03', url: 'https://mp.weixin.qq.com/s/T2WCNIHHmQUNMM8jmURILQ', category: 'emb', tags: ['嵌入式', 'C51']},
     /** 05 **/
+    {title: 'C51 单片机开发 AUXR 寄存器说明', date: '2024-05-31', url: 'https://mp.weixin.qq.com/s/YGyofzjFDaPMc-ZRuiuudw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51单片机开发 C 语言位运算技巧', date: '2024-05-27', url: 'https://mp.weixin.qq.com/s/WamiNA85_4SuUndJ3U_7vQ', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发 LED 灯 1 秒切换一次状态', date: '2024-05-24', url: 'https://mp.weixin.qq.com/s/XLCyVFHzApoHfg7Mcvp8TQ', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发定时器配置详解', date: '2024-05-20', url: 'https://mp.weixin.qq.com/s/VkdAgue45gzVnEhmGrlpPA', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发定时器计时10ms的计算', date: '2024-05-17', url: 'https://mp.weixin.qq.com/s/lJkd0XHdV7zwfz2Zjg8aEw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发寄存器', date: '2024-05-13', url: 'https://mp.weixin.qq.com/s/7vBsUY_ulaV_vcmMRpZiRw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发定时器数一次要多久', date: '2024-05-10', url: 'https://mp.weixin.qq.com/s/G2fYsumJ6tuStD22nXJ6wg', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发晶振与相关概念', date: '2024-05-06', url: 'https://mp.weixin.qq.com/s/Per8ccn4SkQCjbgoM_MkTQ', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发定时器/计数器的初识', date: '2024-05-04', url: 'https://mp.weixin.qq.com/s/bdpOI9-ohKOewcJwzZo0iA', category: 'emb', tags: ['嵌入式', 'C51']},
     /** 04 **/
+    {title: 'C51 单片机开发震动提示的功能', date: '2024-04-29', url: 'https://mp.weixin.qq.com/s/xj4Shr0FE1J2QcH9UJkecg', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发 433M 控制继电器', date: '2024-04-26', url: 'https://mp.weixin.qq.com/s/7BwXv4h2I7D-r3gftxDEAw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发震动让喇叭响起来', date: '2024-04-22', url: 'https://mp.weixin.qq.com/s/tCxqzILoN29pCKwS_Bokjw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发振动传感器控制继电器', date: '2024-04-19', url: 'https://mp.weixin.qq.com/s/J8VNKG8xdA04CssFIQlOyg', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发震动传感器介绍', date: '2024-04-15', url: 'https://mp.weixin.qq.com/s/WgotddREwAOL_eDkJ7h66g', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发记录状态位控制 LED 的亮与灭', date: '2024-04-13', url: 'https://mp.weixin.qq.com/s/hFX0qTR53FDmNu2kCIH-Ew', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发一个按键控制 LED 的亮与灭', date: '2024-04-08', url: 'https://mp.weixin.qq.com/s/ovn5aX4yGRjwZousO8ouOA', category: 'emb', tags: ['嵌入式', 'C51']},
     {title: 'C51 单片机开发按键软件消除的抖动', date: '2024-04-01', url: 'https://mp.weixin.qq.com/s/TryI0X7-1E6v-vz_pKBFiw', category: 'emb', tags: ['嵌入式', 'C51']},
     /** 03 **/
     {title: 'C51 单片机开发两个按键控制 LED 的灯亮和灯灭', date: '2024-03-29', url: 'https://mp.weixin.qq.com/s/7cT-qDkkujL4aagj4X8G9g', category: 'emb', tags: ['嵌入式', 'C51']},
