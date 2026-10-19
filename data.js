@@ -32,11 +32,18 @@ const articleCategoryMeta = {
     ops:     {name: '运维'},
     golang:  {name: 'GOLANG'},
     front:   {name: '前端'},
+    basic:   {name: '计算机基础'},
+    asm:     {name: '汇编语言'}
 };
 
 const articles = [
     ////////////////////////////////////////////////////////////////////////////////
     /** 2026 **/
+    /** 12 **/
+    /** 11 **/
+    /** 10 **/
+    /** 09 **/
+    /** 08 **/
     /** 07 **/
     {title: '查看《三国群英传2》中不让查看的武将信息', date: '2026-07-11', url: 'https://mp.weixin.qq.com/s/O6eVtuervMPVGx0R7uDfEw', category: 'reverse', tags: ['逆向工程', '单机游戏']},
     {title: '三国群英传2城市和武将的数据关系', date: '2026-07-09', url: 'https://mp.weixin.qq.com/s/oUBjw4ywwQ8lNG6f7Douxw', category: 'reverse', tags: ['逆向工程', '单机游戏']},
@@ -63,80 +70,126 @@ const articles = [
     {title: 'babyvm 逆向分析（乘法逆元在加密算法中的应用）', date: '2025-12-26', url: 'https://mp.weixin.qq.com/s/3vu6LamWpgUPkNPIkCfCfw', category: 'reverse', tags: ['逆向工程', 'CTF', '加密算法','VM', '软件安全']},
     {title: 'babyvm 逆向分析（三）', date: '2025-12-25', url: 'https://mp.weixin.qq.com/s/i0GYzPdeajUgoAyx-xNE5g', category: 'reverse', tags: ['逆向工程', 'CTF', 'VM', '软件安全']},
     {title: 'babyvm 逆向分析（二）', date: '2025-12-24', url: 'https://mp.weixin.qq.com/s/FuyecdD1Ap6IBQsbWuQvRg', category: 'reverse', tags: ['逆向工程', 'CTF', 'VM', '软件安全']},
-    {title: 'babyvm 逆向分析（一）', date: '2025-12-23', url: 'https://mp.weixin.qq.com/s/UyuEa42LKWdcJ2sHxSORrw', category: 'reverse', tags: ['逆向工程', 'CTF', 'VM', '软件安全']},    
+    {title: 'babyvm 逆向分析（一）', date: '2025-12-23', url: 'https://mp.weixin.qq.com/s/UyuEa42LKWdcJ2sHxSORrw', category: 'reverse', tags: ['逆向工程', 'CTF', 'VM', '软件安全']},
     {title: '某二进制 VM 逆向分析（三）', date: '2025-12-22', url: 'https://mp.weixin.qq.com/s/y79FUInGEEl1rVBrbfwciA', category: 'reverse', tags: ['逆向工程', 'CTF','VM', '软件安全']},
     {title: '某二进制 VM 逆向分析（二）', date: '2025-12-20', url: 'https://mp.weixin.qq.com/s/w90kGQnErKRYtFK0tXhkrA', category: 'reverse', tags: ['逆向工程', 'CTF','VM', '软件安全']},
     {title: '某二进制 VM 逆向分析（一）', date: '2025-12-18', url: 'https://mp.weixin.qq.com/s/3gWOsrY6wgfBZvvKdcqIfQ', category: 'reverse', tags: ['逆向工程', 'CTF','VM', '软件安全']},
     /** 11 **/
     {title: '看人下菜的恶意推广软件', date: '2025-11-13', url: 'https://mp.weixin.qq.com/s/RbAdpbtxwOxg6hSbdmy8Ig', category: 'other', tags: ['软件安全']},
     {title: '恶意软件 Downloader 与系统 Loader 的设计同源性', date: '2025-11-11', url: 'https://mp.weixin.qq.com/s/joG6_PKr-OJOuZUZ0r_mvQ', category: 'security', tags: ['软件安全']},
-    /** 11 **/
     /** 10 **/
+    {title: '不装杀毒软件可以，但不打 Windows 补丁？那你是在“裸奔”！', date: '2025-10-16', url: 'https://mp.weixin.qq.com/s/yH3omRNNQZSFvyjRwoyarA', category: 'security', tags: ['信息安全']},
+    {title: 'Java 的 0x7c00 之搞怪的 Java 代码', date: '2025-10-07', url: 'https://mp.weixin.qq.com/s/MRRdqYMWopAa8T2FnmfT8w', category: 'java', tags: ['java']},
     /** 09 **/
+    {title: 'Sam Altman 喝下了自己鸡汤成就了自己的人生', date: '2025-09-27', url: 'https://mp.weixin.qq.com/s/HGYYtNO1z-KBoRJfyfOx3g', category: 'other', tags: ['其他']},
+    {title: '内存管理：分段、分页和段页式，到底咋回事？', date: '2025-09-08', url: 'https://mp.weixin.qq.com/s/bVodozmtxLSl7lfC424LbA', category: 'asm', tags: ['汇编']},
     /** 08 **/
+    {title: 'API请求关键指标全解：从连接到性能的全景分析', date: '2025-08-20', url: 'https://mp.weixin.qq.com/s/vk1nNEfCj9D78w0qql0uQA', category: 'other', tags: ['其他']},
+    {title: '指针数组和页表的类比', date: '2025-08-13', url: 'https://mp.weixin.qq.com/s/uiKNUSt5910irrptaYjtvA', category: 'asm', tags: ['汇编', 'C\C++']},
     /** 07 **/
+    {title: '程序员都会的 CRUD 之段描述符表', date: '2025-07-25', url: 'https://mp.weixin.qq.com/s/d5WFMs3J0cCAK7AQd0kqQw', category: 'asm', tags: ['汇编']},
+    {title: '函数调用之 CALL 的硬编码', date: '2025-07-14', url: 'https://mp.weixin.qq.com/s/4EpZm1Je4q6Iq3vIVemM_w', category: 'reverse', tags: ['逆向工程', '汇编']},
+    {title: 'main 函数程序入口？充其量是程序员的代码入口！', date: '2025-07-07', url: 'https://mp.weixin.qq.com/s/siOasN3RAdr5SYSSRco-wA', category: 'reverse', tags: ['逆向工程']},
+    {title: 'jetbrains 全家桶一年薅起来', date: '2025-07-01', url: 'https://mp.weixin.qq.com/s/T-dAbuy95crsyERK02UVVg', category: 'other', tags: ['其他']},
     /** 06 **/
+    {title: '你这个程序员懂函数调用么', date: '2025-06-30', url: 'https://mp.weixin.qq.com/s/dzipZQ905ARhgzOZ5-Ubnw', category: 'reverse', tags: ['逆向工程']},
+    {title: '看了这些代码，你觉得这些设计是巧合还是故意的？', date: '2025-06-23', url: 'https://mp.weixin.qq.com/s/Z_Jd8av0pY6AK7j6786gMg', category: 'asm', tags: ['汇编']},
+    {title: '演示一下我们说的 7c00 和 55AA', date: '2025-06-09', url: 'https://mp.weixin.qq.com/s/ZRpLw1MSn0Y8DbdXt0pWcQ', category: 'asm', tags: ['汇编']},
     /** 05 **/
+    {title: '从内存地址 0x7c00 思考程序员的差距之 0x55aa', date: '2025-05-12', url: 'https://mp.weixin.qq.com/s/68Cv-lL0HfGTH1-OsoBS6A', category: 'asm', tags: ['汇编']},
     /** 04 **/
+    {title: '从内存地址 0x7c00 思考程序员的差距', date: '2025-04-30', url: 'https://mp.weixin.qq.com/s/StWZ2vGEBE65NqZ8gMJlKA', category: 'asm', tags: ['汇编']},
     {title: 'C 语言的位运算例子——解析标志寄存器', date: '2025-04-06', url: 'https://mp.weixin.qq.com/s/BtonmyPd5fhru0H_ueQbng', category: 'cpp', tags: ['C\C++'], columns: ['C\C++']},
     /** 03 **/
+    {title: '下载并解密加密后的 m3u8 视频', date: '2025-03-31', url: 'https://mp.weixin.qq.com/s/9aR8QkT1E5_Ny_FA1SrM5w', category: 'reverse', tags: ['js逆向']},
     /** 02 **/
+    {title: '简述 AT&T 和 Intel 汇编语法差别', date: '2025-02-24', url: 'https://mp.weixin.qq.com/s/5vq9v4eUgaEeT_xqNR9skA', category: 'asm', tags: ['汇编']},
+    {title: '绕过登录验证下载附件的小把戏', date: '2025-02-17', url: 'https://mp.weixin.qq.com/s/TRJM1scppL68JbbafS7qiA', category: 'reverse', tags: ['js逆向']},
     /** 01 **/
     
     ////////////////////////////////////////////////////////////////////////////////
     /** 2024 **/
     /** 12 **/
+    {title: '2024 还有半个月就过完了，2025 ……', date: '2024-12-23', url: 'https://mp.weixin.qq.com/s/bTkKPoUXkjg-v9P93pgMfw', category: 'other', tags: ['其他']},
     {title: 'Windows 平台下 IDA 远程调试 Linux 可执行文件', date: '2024-12-02', url: 'https://mp.weixin.qq.com/s/EBMVviVQtj4WBCHgM8kE9A', category: 'reverse', tags: ['逆向工程', 'IDA']},
     /** 11 **/
+    {title: 'HTTP 请求方式和常见状态码', date: '2024-11-06', url: 'https://mp.weixin.qq.com/s/cBNeWFWQIfxY1jK-2KR43Q', category: 'basic', tags: ['网络基础']},
     /** 10 **/
+    {title: 'C51 单片机开发 LCD1602 写时序图介绍', date: '2024-10-14', url: 'https://mp.weixin.qq.com/s/GAZfq1cUKWjW249X6BbQHw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 LCD 显示数据的方式', date: '2024-10-03', url: 'https://mp.weixin.qq.com/s/wRVn7K_YCFyRcUifAwdOqQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 09 **/
+    {title: 'C51 单片机开发认识LCD', date: '2024-09-27', url: 'https://mp.weixin.qq.com/s/ekUkDMjudod9x8W3qVCLPA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发通过 4G 模块点亮 LED', date: '2024-09-23', url: 'https://mp.weixin.qq.com/s/Gi9LhPJuaxsIGpKc3aaJJg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 4G 模块和服务器通信', date: '2024-09-20', url: 'https://mp.weixin.qq.com/s/T6im12jKjewsnMmeIsQs9A', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 4G 模块开发准备搭建一个花生壳', date: '2024-09-16', url: 'https://mp.weixin.qq.com/s/xWvxDTU7wl_362U6oy3Lzg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 4G 模块的 AT 指令', date: '2024-09-13', url: 'https://mp.weixin.qq.com/s/an0Robr5UfzTm5m_1DlB_A', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发认识 4G 模块', date: '2024-09-09', url: 'https://mp.weixin.qq.com/s/ECcucSkkg6r7AqxzIqvjVg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 WIFI 模块以 AP 模式工作', date: '2024-09-06', url: 'https://mp.weixin.qq.com/s/s5P66CSD0iOCRHEYPa0OEw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发处理 AT 指令返回的错误信息', date: '2024-09-02', url: 'https://mp.weixin.qq.com/s/pWPWTwYcz5QhQ-u_JtSW4w', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 08 **/
+    {title: 'C51 单片机开发测试 AT 指令返回结果的调试方法', date: '2024-08-30', url: 'https://mp.weixin.qq.com/s/o_5GOcmnJm8_Y5s4zhFlKg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 WIFI 模块 AT 指令结果检测', date: '2024-08-26', url: 'https://mp.weixin.qq.com/s/tZa04irTsybe-R5Bsim_-A', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发测试 WIFI 模块网络通信', date: '2024-08-24', url: 'https://mp.weixin.qq.com/s/R1RlaQA_znRJbIH3DvV4ZQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发通过 TCP 控制 LED', date: '2024-08-19', url: 'https://mp.weixin.qq.com/s/ad-Rxdk1gmwuM_pVy3ABXQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发串口控制 WIFI 模块', date: '2024-08-12', url: 'https://mp.weixin.qq.com/s/lzk2Dd6NTq1CETh-nMVTrQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 WIFI 模块的简单通信', date: '2024-08-05', url: 'https://mp.weixin.qq.com/s/OX9Xdp5RSH9XZEc0OAHbWw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 07 **/
-    {title: 'C51 单片机开发串口初始化实现', date: '2024-07-05', url: 'https://mp.weixin.qq.com/s/L_32Y-kE6uq1-BhsTMq9zA', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发串口初始化分析', date: '2024-07-03', url: 'https://mp.weixin.qq.com/s/0IBfgdU74EltpLHf8Knviw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发单片机发数据给 PC', date: '2024-07-01', url: 'https://mp.weixin.qq.com/s/CjkzTgMS9PBqRa4rI3lcHQ', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: '内容停更一段时间……', date: '2024-07-31', url: 'https://mp.weixin.qq.com/s/gvGf2StTYpwLxJyzO58fJA', category: 'other', tags: ['其他']},
+    {title: 'C51 单片机开发 WIFI 模块的简单配置', date: '2024-07-29', url: 'https://mp.weixin.qq.com/s/cn2YtuksLm4xbjXhpdnx6Q', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 WIFI 模块的介绍', date: '2024-07-26', url: 'https://mp.weixin.qq.com/s/Ta-mp0252kZ1yWi9uN1hCw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发蓝牙模块的设置', date: '2024-07-24', url: 'https://mp.weixin.qq.com/s/z5eDB6u9KxL7-RlXmr-2Hw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发蓝牙模块发送数据', date: '2024-07-22', url: 'https://mp.weixin.qq.com/s/-AwD9jgt_rN--OUPhY3NOg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发蓝牙模块介绍', date: '2024-07-19', url: 'https://mp.weixin.qq.com/s/hvqPzbqxQUZ8sVv9sLo8Bw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发发送命令控制 LED', date: '2024-07-17', url: 'https://mp.weixin.qq.com/s/xyckgowAqQi1BT0WlJlMlg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发串口 HEX 模式发送数据', date: '2024-07-15', url: 'https://mp.weixin.qq.com/s/Gd3-g515AwgICLRacs0JMQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发用UART中断控制LED', date: '2024-07-12', url: 'https://mp.weixin.qq.com/s/3KcY-TOlSaq7bd66JCVMOw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发串口通过PC点亮LED', date: '2024-07-10', url: 'https://mp.weixin.qq.com/s/FRjFlvfdsArMs4FynkGriQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发发送字符串给 PC', date: '2024-07-08', url: 'https://mp.weixin.qq.com/s/ZYRUfSZPLWc18_IQt9Sv3A', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发串口初始化实现', date: '2024-07-05', url: 'https://mp.weixin.qq.com/s/L_32Y-kE6uq1-BhsTMq9zA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发串口初始化分析', date: '2024-07-03', url: 'https://mp.weixin.qq.com/s/0IBfgdU74EltpLHf8Knviw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发单片机发数据给 PC', date: '2024-07-01', url: 'https://mp.weixin.qq.com/s/CjkzTgMS9PBqRa4rI3lcHQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 06 **/
-    {title: 'C51 单片机开发认识串口通信', date: '2024-06-28', url: 'https://mp.weixin.qq.com/s/U48g9SDl2XJ7YFsMMiIpDw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发认识串口', date: '2024-06-26', url: 'https://mp.weixin.qq.com/s/khHjVRe_3qI44S7Xj1Lz1Q', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发超声波测距传感器控制 LED 灯', date: '2024-06-24', url: 'https://mp.weixin.qq.com/s/50j2psaGJJfwFwoVtRLBig', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发认识超声波测距传感器', date: '2024-06-21', url: 'https://mp.weixin.qq.com/s/yMMXm3XEMf0NjxOVDGhf_Q', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发模拟 PWM 控制舵机', date: '2024-06-19', url: 'https://mp.weixin.qq.com/s/Zp4dMVFAeaf_JWV3cQvm0Q', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发认识舵机', date: '2024-06-17', url: 'https://mp.weixin.qq.com/s/f9gOmcgZY4fguIZqVZy6fg', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发认识 PWM', date: '2024-06-14', url: 'https://mp.weixin.qq.com/s/t5PxEsCHoiqq5TZbVhrO9Q', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发中断方式控制 LED', date: '2024-06-10', url: 'https://mp.weixin.qq.com/s/tcvNJmFLPWlMdEHheQrfrA', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发定时器中断寄存器', date: '2024-06-07', url: 'https://mp.weixin.qq.com/s/DjTNNb0wsQYKhq583foOeQ', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发说说中断是什么', date: '2024-06-03', url: 'https://mp.weixin.qq.com/s/T2WCNIHHmQUNMM8jmURILQ', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发认识串口通信', date: '2024-06-28', url: 'https://mp.weixin.qq.com/s/U48g9SDl2XJ7YFsMMiIpDw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发认识串口', date: '2024-06-26', url: 'https://mp.weixin.qq.com/s/khHjVRe_3qI44S7Xj1Lz1Q', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发超声波测距传感器控制 LED 灯', date: '2024-06-24', url: 'https://mp.weixin.qq.com/s/50j2psaGJJfwFwoVtRLBig', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发认识超声波测距传感器', date: '2024-06-21', url: 'https://mp.weixin.qq.com/s/yMMXm3XEMf0NjxOVDGhf_Q', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发模拟 PWM 控制舵机', date: '2024-06-19', url: 'https://mp.weixin.qq.com/s/Zp4dMVFAeaf_JWV3cQvm0Q', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发认识舵机', date: '2024-06-17', url: 'https://mp.weixin.qq.com/s/f9gOmcgZY4fguIZqVZy6fg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发认识 PWM', date: '2024-06-14', url: 'https://mp.weixin.qq.com/s/t5PxEsCHoiqq5TZbVhrO9Q', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发中断方式控制 LED', date: '2024-06-10', url: 'https://mp.weixin.qq.com/s/tcvNJmFLPWlMdEHheQrfrA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发定时器中断寄存器', date: '2024-06-07', url: 'https://mp.weixin.qq.com/s/DjTNNb0wsQYKhq583foOeQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发说说中断是什么', date: '2024-06-03', url: 'https://mp.weixin.qq.com/s/T2WCNIHHmQUNMM8jmURILQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 05 **/
-    {title: 'C51 单片机开发 AUXR 寄存器说明', date: '2024-05-31', url: 'https://mp.weixin.qq.com/s/YGyofzjFDaPMc-ZRuiuudw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51单片机开发 C 语言位运算技巧', date: '2024-05-27', url: 'https://mp.weixin.qq.com/s/WamiNA85_4SuUndJ3U_7vQ', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发 LED 灯 1 秒切换一次状态', date: '2024-05-24', url: 'https://mp.weixin.qq.com/s/XLCyVFHzApoHfg7Mcvp8TQ', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发定时器配置详解', date: '2024-05-20', url: 'https://mp.weixin.qq.com/s/VkdAgue45gzVnEhmGrlpPA', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发定时器计时10ms的计算', date: '2024-05-17', url: 'https://mp.weixin.qq.com/s/lJkd0XHdV7zwfz2Zjg8aEw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发寄存器', date: '2024-05-13', url: 'https://mp.weixin.qq.com/s/7vBsUY_ulaV_vcmMRpZiRw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发定时器数一次要多久', date: '2024-05-10', url: 'https://mp.weixin.qq.com/s/G2fYsumJ6tuStD22nXJ6wg', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发晶振与相关概念', date: '2024-05-06', url: 'https://mp.weixin.qq.com/s/Per8ccn4SkQCjbgoM_MkTQ', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发定时器/计数器的初识', date: '2024-05-04', url: 'https://mp.weixin.qq.com/s/bdpOI9-ohKOewcJwzZo0iA', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发 AUXR 寄存器说明', date: '2024-05-31', url: 'https://mp.weixin.qq.com/s/YGyofzjFDaPMc-ZRuiuudw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51单片机开发 C 语言位运算技巧', date: '2024-05-27', url: 'https://mp.weixin.qq.com/s/WamiNA85_4SuUndJ3U_7vQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 LED 灯 1 秒切换一次状态', date: '2024-05-24', url: 'https://mp.weixin.qq.com/s/XLCyVFHzApoHfg7Mcvp8TQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发定时器配置详解', date: '2024-05-20', url: 'https://mp.weixin.qq.com/s/VkdAgue45gzVnEhmGrlpPA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发定时器计时10ms的计算', date: '2024-05-17', url: 'https://mp.weixin.qq.com/s/lJkd0XHdV7zwfz2Zjg8aEw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发寄存器', date: '2024-05-13', url: 'https://mp.weixin.qq.com/s/7vBsUY_ulaV_vcmMRpZiRw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发定时器数一次要多久', date: '2024-05-10', url: 'https://mp.weixin.qq.com/s/G2fYsumJ6tuStD22nXJ6wg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发晶振与相关概念', date: '2024-05-06', url: 'https://mp.weixin.qq.com/s/Per8ccn4SkQCjbgoM_MkTQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发定时器/计数器的初识', date: '2024-05-04', url: 'https://mp.weixin.qq.com/s/bdpOI9-ohKOewcJwzZo0iA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 04 **/
-    {title: 'C51 单片机开发震动提示的功能', date: '2024-04-29', url: 'https://mp.weixin.qq.com/s/xj4Shr0FE1J2QcH9UJkecg', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发 433M 控制继电器', date: '2024-04-26', url: 'https://mp.weixin.qq.com/s/7BwXv4h2I7D-r3gftxDEAw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发震动让喇叭响起来', date: '2024-04-22', url: 'https://mp.weixin.qq.com/s/tCxqzILoN29pCKwS_Bokjw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发振动传感器控制继电器', date: '2024-04-19', url: 'https://mp.weixin.qq.com/s/J8VNKG8xdA04CssFIQlOyg', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发震动传感器介绍', date: '2024-04-15', url: 'https://mp.weixin.qq.com/s/WgotddREwAOL_eDkJ7h66g', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发记录状态位控制 LED 的亮与灭', date: '2024-04-13', url: 'https://mp.weixin.qq.com/s/hFX0qTR53FDmNu2kCIH-Ew', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发一个按键控制 LED 的亮与灭', date: '2024-04-08', url: 'https://mp.weixin.qq.com/s/ovn5aX4yGRjwZousO8ouOA', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发按键软件消除的抖动', date: '2024-04-01', url: 'https://mp.weixin.qq.com/s/TryI0X7-1E6v-vz_pKBFiw', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发震动提示的功能', date: '2024-04-29', url: 'https://mp.weixin.qq.com/s/xj4Shr0FE1J2QcH9UJkecg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 433M 控制继电器', date: '2024-04-26', url: 'https://mp.weixin.qq.com/s/7BwXv4h2I7D-r3gftxDEAw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发震动让喇叭响起来', date: '2024-04-22', url: 'https://mp.weixin.qq.com/s/tCxqzILoN29pCKwS_Bokjw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发振动传感器控制继电器', date: '2024-04-19', url: 'https://mp.weixin.qq.com/s/J8VNKG8xdA04CssFIQlOyg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发震动传感器介绍', date: '2024-04-15', url: 'https://mp.weixin.qq.com/s/WgotddREwAOL_eDkJ7h66g', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发记录状态位控制 LED 的亮与灭', date: '2024-04-13', url: 'https://mp.weixin.qq.com/s/hFX0qTR53FDmNu2kCIH-Ew', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发一个按键控制 LED 的亮与灭', date: '2024-04-08', url: 'https://mp.weixin.qq.com/s/ovn5aX4yGRjwZousO8ouOA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发按键软件消除的抖动', date: '2024-04-01', url: 'https://mp.weixin.qq.com/s/TryI0X7-1E6v-vz_pKBFiw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 03 **/
-    {title: 'C51 单片机开发两个按键控制 LED 的灯亮和灯灭', date: '2024-03-29', url: 'https://mp.weixin.qq.com/s/7cT-qDkkujL4aagj4X8G9g', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发按键让灯亮起来', date: '2024-03-25', url: 'https://mp.weixin.qq.com/s/nJxJ5WkeKrWIHFZ2O44kwg', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51单片机开发让 LED 闪起来', date: '2024-03-22', url: 'https://mp.weixin.qq.com/s/LiEriC4TSIpxVP59dCZCLg', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发点亮一个 LED', date: '2024-03-18', url: 'https://mp.weixin.qq.com/s/Cu2zyCuq1cGNUZQ0sdt2zw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发 I/O 口输入输出', date: '2024-03-15', url: 'https://mp.weixin.qq.com/s/uZmwPdXT4TheocMr24ClNw', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发 SFR 及 SBIT 的作用', date: '2024-03-11', url: 'https://mp.weixin.qq.com/s/uCsSDlP0E-ddd5KS1wENoQ', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发的理解', date: '2024-03-08', url: 'https://mp.weixin.qq.com/s/2kXPl4jZmqa2PM1rM6YXtA', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发将 Keil 生成的文件写入单片机', date: '2024-03-04', url: 'https://mp.weixin.qq.com/s/j1WV35V3BCZXiQqiGgLeAA', category: 'emb', tags: ['嵌入式', 'C51']},
-    {title: 'C51 单片机开发用 Keil 创建工程', date: '2024-03-01', url: 'https://mp.weixin.qq.com/s/qOmaHgBeo4gNUqk-tPRPDg', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发两个按键控制 LED 的灯亮和灯灭', date: '2024-03-29', url: 'https://mp.weixin.qq.com/s/7cT-qDkkujL4aagj4X8G9g', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发按键让灯亮起来', date: '2024-03-25', url: 'https://mp.weixin.qq.com/s/nJxJ5WkeKrWIHFZ2O44kwg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51单片机开发让 LED 闪起来', date: '2024-03-22', url: 'https://mp.weixin.qq.com/s/LiEriC4TSIpxVP59dCZCLg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发点亮一个 LED', date: '2024-03-18', url: 'https://mp.weixin.qq.com/s/Cu2zyCuq1cGNUZQ0sdt2zw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 I/O 口输入输出', date: '2024-03-15', url: 'https://mp.weixin.qq.com/s/uZmwPdXT4TheocMr24ClNw', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发 SFR 及 SBIT 的作用', date: '2024-03-11', url: 'https://mp.weixin.qq.com/s/uCsSDlP0E-ddd5KS1wENoQ', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发的理解', date: '2024-03-08', url: 'https://mp.weixin.qq.com/s/2kXPl4jZmqa2PM1rM6YXtA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发将 Keil 生成的文件写入单片机', date: '2024-03-04', url: 'https://mp.weixin.qq.com/s/j1WV35V3BCZXiQqiGgLeAA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
+    {title: 'C51 单片机开发用 Keil 创建工程', date: '2024-03-01', url: 'https://mp.weixin.qq.com/s/qOmaHgBeo4gNUqk-tPRPDg', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     /** 02 **/
-    {title: 'C51 单片机开发环境的安装', date: '2024-02-26', url: 'https://mp.weixin.qq.com/s/MqcDfiYVlyxxKWy4jBBHOA', category: 'emb', tags: ['嵌入式', 'C51']},
+    {title: 'C51 单片机开发环境的安装', date: '2024-02-26', url: 'https://mp.weixin.qq.com/s/MqcDfiYVlyxxKWy4jBBHOA', category: 'emb', tags: ['嵌入式', 'C51'], columns:['C51']},
     {title: '五点多起床，我得到了什么人生启示？', date: '2024-02-16', url: 'https://mp.weixin.qq.com/s/7jAmJ4Qfg0elp1__xsnkgQ', category: 'other', tags: ['其他']},
     {title: '终于看完了！推荐这本让我扔在一边好多年的好看书', date: '2024-02-15', url: 'https://mp.weixin.qq.com/s/M-RGpslQduSEoA3bMC9PPQ', category: 'other', tags: ['其他']},
     {title: '除夕祝福语奉送：美好的心情，开启幸福新年', date: '2024-02-09', url: 'https://mp.weixin.qq.com/s/v1QwQyeH_PvD2xNDEuJ-yw', category: 'other', tags: ['其他']},
