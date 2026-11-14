@@ -12,7 +12,7 @@ const COLLAPSE_THRESHOLD = 3;
 
 /* ============ 一、GitHub 作品 ============ */
 const projects = [
-    // { name: 'markdown-index', desc: '把零散的 markdown 笔记整理成可检索的静态索引页。', url: 'https://github.com/yourname/markdown-index', lang: 'JavaScript', langColor: '#f1e05a', stars: 128 },
+    { name: 'SangoVA', desc: '三国群英传2助手', url: 'https://github.com/netor0x86/SangoVA', lang: 'JavaScript', langColor: '#f1e05a', stars: 128 },
     // { name: 'wechat-exporter', desc: '一键导出公众号历史文章为本地 markdown + 图片。', url: 'https://github.com/yourname/wechat-exporter', lang: 'Python', langColor: '#3572A5', stars: 342 },
     // { name: 'readwise-sync', desc: '把 Readwise 高亮同步到 Obsidian，自动生成每日笔记。', url: 'https://github.com/yourname/readwise-sync', lang: 'TypeScript', langColor: '#3178c6', stars: 56 },
     // { name: 'tiny-pomodoro', desc: '一个极简的番茄钟，支持菜单栏常驻和快捷键。', url: 'https://github.com/yourname/tiny-pomodoro', lang: 'Swift', langColor: '#F05138', stars: 89 }
@@ -41,6 +41,7 @@ const articles = [
     /** 2026 **/
     /** 12 **/
     /** 11 **/
+    {title: '继续《三国群英传2》的辅助工具', date: '2026-11-14', url: 'https://mp.weixin.qq.com/s/xSurEJg_mITuJFF8mRlXcw', category: 'reverse', tags: ['逆向工程', '单机游戏']},
     /** 10 **/
     /** 09 **/
     /** 08 **/
