@@ -12,7 +12,7 @@ const COLLAPSE_THRESHOLD = 3;
 
 /* ============ 一、GitHub 作品 ============ */
 const projects = [
-    { name: 'SangoVA', desc: '三国群英传2助手', url: 'https://github.com/netor0x86/SangoVA', lang: 'JavaScript', langColor: '#f1e05a', stars: 128 },
+    { name: 'SangoVA', desc: '三国群英传2助手', url: 'https://github.com/netor0x86/SangoVA', lang: 'C++', langColor: '#f1e05a', stars: 0 },
     // { name: 'wechat-exporter', desc: '一键导出公众号历史文章为本地 markdown + 图片。', url: 'https://github.com/yourname/wechat-exporter', lang: 'Python', langColor: '#3572A5', stars: 342 },
     // { name: 'readwise-sync', desc: '把 Readwise 高亮同步到 Obsidian，自动生成每日笔记。', url: 'https://github.com/yourname/readwise-sync', lang: 'TypeScript', langColor: '#3178c6', stars: 56 },
     // { name: 'tiny-pomodoro', desc: '一个极简的番茄钟，支持菜单栏常驻和快捷键。', url: 'https://github.com/yourname/tiny-pomodoro', lang: 'Swift', langColor: '#F05138', stars: 89 }
